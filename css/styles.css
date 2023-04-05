@@ -27,7 +27,6 @@ label:hover {
 }
 
 /* toggle switch */
-
 .toggle-switch {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -155,6 +154,7 @@ svg:hover {
   fill: var(--primary);
 }
 
+/* tablet screen size*/
 @media (min-width: 768px) {
   section.portfolio-section {
     min-height: 100vh;
@@ -163,6 +163,8 @@ svg:hover {
     min-width: 18rem;
   }
 }
+
+/* desktop screen size */
 @media (min-width: 992px) {
   body {
     padding-top: 0;
