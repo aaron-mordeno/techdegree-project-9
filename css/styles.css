@@ -4,63 +4,21 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
+:root {
+  --background-color: #fff;
+  --body-color: #343a40;
+  --header-color: #343a40;
+  --card-header: #343a40;
+  --card-text: #868e96;
+  --card-border: #868e96;
+  --card-background: #fff;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   padding-top: 54px;
-  color: var(--gray-dark);
-  background-color: var(--white);
-}
-
-/* nav bar */
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-label {
-  display: none;
-}
-label:hover {
-  cursor: pointer;
-}
-.bg-primary {
-  background-color: var(--primary) !important;
-}
-
-/* toggle switch */
-.toggle-switch {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
-  position: relative;
-  width: 30px;
-  height: 18px;
-  border-radius: 25px;
-  background-color: var(--white);
-  transition: background 0.3s;
-  outline: none;
-  cursor: pointer;
-}
-
-.toggle-switch::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  height: 0.75rem;
-  width: 0.75rem;
-  background-color: var(--primary);
-  transition: left 0.3s;
-}
-
-.toggle-switch:checked {
-  background-color: var(--gray-dark);
-}
-
-.toggle-switch:checked::after {
-  left: 70%;
+  color: var(--body-color);
+  background-color: var(--background-color);
 }
 
 /* text styles */
@@ -68,7 +26,7 @@ label:hover {
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--gray-dark);
+  color: var(--header-color);
 }
 h1 {
   font-size: 6rem;
@@ -84,7 +42,7 @@ h2 {
   font-size: 1.35rem;
 }
 a {
-  color: var(--primary);
+  color: #007bff;
 }
 a:active,
 a:focus,
@@ -94,26 +52,23 @@ a:hover {
 
 /* card styles */
 .card {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--card-border);
+  background-color: var(--card-background);
 }
 
 .card-title {
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--gray-dark);
+  color: var(--card-header);
 }
 p.card-text {
-  color: var(--gray);
-}
-
-svg {
-  color: var(--gray);
+  color: var(--card-text);
 }
 
 /* section styles */
 section.portfolio-section {
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #868e96;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
 }
@@ -127,19 +82,73 @@ section.portfolio-section {
   height: 200px;
 }
 .btn {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #007bff;
+  color: #fff;
 }
 #send.btn {
   width: 100%;
 }
 
+/* nav bar */
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+/* toggle switch */
+.toggle-switch {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  border-radius: 25px;
+  background-color: #fff;
+  transition: background 0.3s;
+  transform: translate(0, 25%);
+  outline: none;
+  cursor: pointer;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #007bff;
+  transition: left 0.3s;
+}
+
+.toggle-switch:checked {
+  background-color: #343a40;
+}
+
+.toggle-switch:checked::after {
+  left: 70%;
+}
+
 /* svg icon styles */
 .list-social-icons a {
-  color: var(--gray);
+  color: #868e96;
 }
 .list-social-icons a:hover {
-  color: var(--primary);
+  color: #007bff;
 }
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
@@ -148,10 +157,13 @@ section.portfolio-section {
   font-size: 3rem;
 }
 .list-icons .list-inline-item i:hover {
-  color: var(--primary);
+  color: #007bff;
+}
+svg {
+  color: #868e96;
 }
 svg:hover {
-  fill: var(--primary);
+  fill: #007bff;
 }
 
 /* tablet screen size*/
@@ -205,10 +217,7 @@ svg:hover {
     flex-direction: column;
     width: 100%;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
+    display: inline-block;
   }
 }
