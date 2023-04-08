@@ -75,9 +75,6 @@ section.portfolio-section {
 section.portfolio-section:nth-child(3) {
   border-bottom: none;
 }
-section.portfolio-section {
-  min-width: none;
-}
 #inputMessage {
   height: 200px;
 }
